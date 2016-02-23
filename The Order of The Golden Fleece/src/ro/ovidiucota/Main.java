@@ -28,7 +28,17 @@ public class Main {
         System.out.println(grom.toString());
         System.out.println(jaina.toString());
         System.out.println(diablo.toString());
+        // Equiping items
+        arthas.equip(sword);
+        arthas.equip(chest);
+        arthas.equip(helmet);
+        arthas.equip(shield);
+        System.out.println(arthas.toString());
 
+        //Two characters atacking
+        BattleEvent.Atack(arthas, grom);
 
+        System.out.println(arthas.toString());
+        System.out.println(grom.toString());
     }
 }

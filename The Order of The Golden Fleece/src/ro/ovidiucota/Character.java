@@ -12,10 +12,6 @@ public class Character {
     protected int level;
     protected int damage;
     protected int armor;
-    protected boolean hasWeapon;
-    protected boolean hasChest;
-    protected boolean hasHelmet;
-    protected boolean hasShield;
     Weapon weapon;
     Chest chest;
     Helmet helmet;
@@ -24,10 +20,38 @@ public class Character {
     protected Character(){
         level = 1;
         health = 50;
-        hasWeapon = false;
-        hasChest = false;
-        hasHelmet = false;
-        hasShield = false;
+    }
+
+    public int getDamage(){
+        return (damage);
+    }
+
+    public int getHealth(){
+        return (health);
+    }
+
+    public int getArmor(){
+        return (armor);
+    }
+
+    public int getLevel(){
+        return (level);
+    }
+
+    public void setDamage(int damage){
+        this.damage = damage;
+    }
+
+    public void setHealth(int health){
+        this.health = health;
+    }
+
+    public void setArmor(int armor){
+        this.armor = armor;
+    }
+
+    public void setLevel(int level){
+        this.level = level;
     }
 
     public String toString(){
@@ -40,18 +64,18 @@ public class Character {
         strChest = "No Chest\n";
         strHelmet = "No Helmet\n";
         strShield = "No Shield\n";
-        strWeapon = "No Weapon\n";
+        strWeapon = "\nNo Weapon\n";
         if (weapon != null){
-            strWeapon = weapon.getType();
+            strWeapon = "\n" + weapon.getType() + " ";
         }
         // TO MODIFY !!!!!!!!!!!
-        if (hasChest){
-            strChest = chest.getType();
+        if (chest != null){
+            strChest = chest.getType() + " ";
         }
-        if (hasHelmet){
-            strHelmet = helmet.getType();
+        if (helmet != null){
+            strHelmet = helmet.getType() + " ";
         }
-        if (hasShield){
+        if (shield != null){
             strShield = shield.getType();
         }
         strAccesories = strWeapon + strChest + strHelmet + strShield;

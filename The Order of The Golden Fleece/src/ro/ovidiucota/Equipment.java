@@ -15,6 +15,14 @@ public class Equipment {
 
 class Armor extends Equipment{
     protected int armor;
+
+    public int getArmor(){
+        return (armor);
+    }
+
+    public String getType(){
+        return (type);
+    }
 }
 
 class Chest extends Armor{
@@ -40,6 +48,14 @@ class Shield extends Armor{
 
 class Weapon extends Equipment{
     protected int damage;
+
+    public int getDamage(){
+        return (damage);
+    }
+
+    public String getType(){
+        return (type);
+    }
 }
 
 class Sword extends Weapon{
