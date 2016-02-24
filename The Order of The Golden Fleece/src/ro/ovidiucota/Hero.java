@@ -23,6 +23,7 @@ public class Hero extends Character{
         this.shield = shield;
         armor += this.shield.getArmor();
     }
+
 }
 class Knight extends Hero{
     public Knight(String name){

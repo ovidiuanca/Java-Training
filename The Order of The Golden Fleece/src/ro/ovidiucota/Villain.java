@@ -14,8 +14,8 @@ public class Villain extends Character {
 class Devil extends Villain{
     public Devil(String name){
         this.name = name;
-        health = 80;
-        damage = 10;
+        health = 400;
+        damage = 35;
     }
 }
 

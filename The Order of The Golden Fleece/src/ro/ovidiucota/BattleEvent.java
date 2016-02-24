@@ -29,4 +29,21 @@ public class BattleEvent {
             }
         }
     }
+
+    public static BattleReport Battle(Hero hero, Villain villain){
+        BattleReport report = new BattleReport();
+        while (hero.getHealth() > 0 && villain.getHealth() > 0){
+            Atack(hero, villain);
+        }
+        if (hero.getHealth() <= 0 && villain.getHealth() <= 0)
+            report.setDraw(hero, villain);
+        else if (hero.getHealth() <= 0){
+            report.setWinner(villain);
+            report.setLoser(hero);
+        } else {
+            report.setWinner(hero);
+            report.setLoser(villain);
+        }
+        return (report);
+    }
 }

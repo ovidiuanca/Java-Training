@@ -1,5 +1,7 @@
 package ro.ovidiucota;
 
+import java.util.Objects;
+
 /**
  * User:    ovidiu
  * Package: The Order of The Golden Fleece
@@ -12,14 +14,22 @@ public class Character {
     protected int level;
     protected int damage;
     protected int armor;
+    protected int id;
+    private static int id_count;
     Weapon weapon;
     Chest chest;
     Helmet helmet;
     Shield shield;
 
     protected Character(){
+        id_count++;
+        id = id_count;
         level = 1;
         health = 50;
+    }
+
+    public String getName(){
+        return (name);
     }
 
     public int getDamage(){
@@ -68,7 +78,6 @@ public class Character {
         if (weapon != null){
             strWeapon = "\n" + weapon.getType() + " ";
         }
-        // TO MODIFY !!!!!!!!!!!
         if (chest != null){
             strChest = chest.getType() + " ";
         }
@@ -80,6 +89,17 @@ public class Character {
         }
         strAccesories = strWeapon + strChest + strHelmet + strShield;
         return ("Name:  " + strName + "  Level:  " + strLevel + "   Health: " + strHealth + "   Armor:  " + strArmor +  "   Damage: " + strDamage + strAccesories);
+    }
+
+    public boolean equals(Object object){
+        if (!(object instanceof Character))
+            return (false);
+        Character character = new Character();
+        character = (Character)object;
+        if (this.id == character.id)
+            return (true);
+        else
+            return (false);
     }
 }
 

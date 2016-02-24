@@ -10,13 +10,13 @@ public class Main {
     public static void main(String[] args){
         // Characters
         Knight arthas = new Knight("Arthas");
-        Orc grom = new Orc("Grommash");
-        Mage jaina = new Mage("Jaina");
-        Devil diablo = new Devil("Diablo");
+        //Orc grom = new Orc("Grommash");
+        //Mage jaina = new Mage("Jaina");
+        //Devil devil = new Devil("Diablo");
 
         // Weapons
-        Wand wand = new Wand();
-        Axe axe = new Axe();
+        //Wand wand = new Wand();
+        //Axe axe = new Axe();
         Sword sword = new Sword();
 
         //Armor
@@ -24,10 +24,6 @@ public class Main {
         Helmet helmet = new Helmet();
         Shield shield = new Shield();
 
-        System.out.println(arthas.toString());
-        System.out.println(grom.toString());
-        System.out.println(jaina.toString());
-        System.out.println(diablo.toString());
         // Equiping items
         arthas.equip(sword);
         arthas.equip(chest);
@@ -36,9 +32,13 @@ public class Main {
         System.out.println(arthas.toString());
 
         //Two characters atacking
-        BattleEvent.Atack(arthas, grom);
+        //BattleEvent.Atack(arthas, grom);
 
-        System.out.println(arthas.toString());
-        System.out.println(grom.toString());
+        //System.out.println(arthas.toString());
+        //System.out.println(devil.toString());
+
+        //Player comes in
+        Player player = new Player("Ovidiu", arthas);
+        Mission.playMission1(player);
     }
 }
