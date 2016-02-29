@@ -14,4 +14,8 @@ public class Mission implements MissionSet {
         report = BattleEvent.Battle(player.hero, devil);
         report.printReport();
     }
+
+    public static void playMission2(Player player){
+
+    }
 }

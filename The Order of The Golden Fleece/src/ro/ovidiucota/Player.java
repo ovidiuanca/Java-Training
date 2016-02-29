@@ -7,11 +7,6 @@ package ro.ovidiucota;
  * Time:    3:10 PM
  */
 public class Player {
-    private String playerName;
     public Hero hero;
 
-    public Player(String name, Hero hero){
-        playerName = name;
-        this.hero = hero;
-    }
 }

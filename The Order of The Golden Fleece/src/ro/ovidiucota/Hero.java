@@ -3,6 +3,9 @@ package ro.ovidiucota;
 public class Hero extends Character{
     protected Hero(){
     }
+    protected Hero(String name){
+        this.name = name;
+    }
 
     public void equip(Weapon weapon){
         this.weapon = weapon;
