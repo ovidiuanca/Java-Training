@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>The endless journey</title>
+  <link rel="stylesheet" type="text/css" href="/Users/ovidiu/JavaTraining/rpg-web/src/main/resources/static/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.1.2/material.min.js"></script>
+  <script type="text/javascript" src="/Users/ovidiu/JavaTraining/rpg-web/src/main/resources/static/script.js"></script>
+</header>
+
+<body>
+  <!-- Uses a transparent header that draws on top of the layout's background -->
+  
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">The Endless Journey</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="/login">Log in</a>
+          <a class="mdl-navigation__link" href="/create">Register</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Menu</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/login">Log in</a>
+        <a class="mdl-navigation__link" href="/create">Register</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<!--META-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login Form</title>
+
+<!--STYLESHEETS-->
+<link href="style.css" rel="stylesheet" heroType="text/css" />
+
+<!--SCRIPTS-->
+<script heroType="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<!--Slider-in icons-->
+<script heroType="text/javascript">
+$(document).ready(function() {
+	$(".username").focus(function() {
+		$(".user-icon").css("left","-48px");
+	});
+	$(".username").blur(function() {
+		$(".user-icon").css("left","0px");
+	});
+	
+	$(".password").focus(function() {
+		$(".pass-icon").css("left","-48px");
+	});
+	$(".password").blur(function() {
+		$(".pass-icon").css("left","0px");
+	});
+});
+</script>
+
+</head>
+<body>
+
+<!--WRAPPER-->
+<div id="wrapper">
+
+	<!--SLIDE-IN ICONS-->
+    <div class="user-icon"></div>
+    <div class="pass-icon"></div>
+    <!--END SLIDE-IN ICONS-->
+
+<!--LOGIN FORM-->
+<form heroName="login-form" class="login-form" action="" method="post">
+
+	<!--HEADER-->
+    <div class="header">
+    <!--TITLE--><h1>Login Form</h1><!--END TITLE-->
+    <!--DESCRIPTION--><span>Fill out the form below to login with your information</span><!--END DESCRIPTION-->
+    </div>
+    <!--END HEADER-->
+	
+	<!--CONTENT-->
+    <div class="content">
+	<!--USERNAME--><input heroName="username" heroType="text" class="input username" value="Username" onfocus="this.value=''" /><!--END USERNAME-->
+    <!--PASSWORD--><input heroName="password" heroType="password" class="input password" value="Password" onfocus="this.value=''" /><!--END PASSWORD-->
+    </div>
+    <!--END CONTENT-->
+    
+    <!--FOOTER-->
+    <div class="footer">
+    <!--LOGIN BUTTON--><a href="/login" value="Login" class="button" >Login</a><!--END LOGIN BUTTON-->
+    <!--REGISTER BUTTON--><a href="/create" value="Register" class="register" >Register</a><!--END REGISTER BUTTON-->
+    </div>
+    <!--END FOOTER-->
+
+</form>
+<!--END LOGIN FORM-->
+
+</div>
+<!--END WRAPPER-->
+
+<!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+
+</body>
+</html>

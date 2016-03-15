@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<table>
+				<thead>
+				<tr>
+					<th>Level</th>
+					<th>Name</th>
+					<th>Health</th>
+				</tr>
+				</thead>
+				<tr th:each="hero: ${heroes}">
+					<td th:text="${hero.level}"></td>
+					<td th:text="${hero.name}"></td>
+					<td th:text="${hero.health}"></td>
+				</tr>
+			</table>
+			<div class="col-lg-1 col-md-0 col-sm-3 col-xs-12">
+				<a href="/createHero" class="btn btn-primary btn-lg active" role="button">Create hero</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+ 

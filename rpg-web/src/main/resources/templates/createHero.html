@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body>
+		<form class="form-horizontal" th:action="@{/createHero}" method="post" th:object="${hero}">
+			<div class="form-group form-group-lg">
+			  <label class="col-sm-2 control-label" for="formGroupInputLarge">Create your Hero</label>
+			</div>
+
+		  <div class="form-group form-group-lg">
+		    <label class="col-sm-2 control-label" for="formGroupInputLarge">Hero Name</label>
+		    <div class="col-sm-3">
+		      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="heroName" th:field="*{name}"/>
+		    </div>
+		  </div>
+
+		  <div class="form-group form-group-lg">
+		    <label class="col-sm-2 control-label" for="formGroupInputLarge">Hero Type</label>
+		    <div class="col-sm-3">
+		      <select class="combobox" style="width: 338px" th:field="*{type}">
+				  <option th:each="oneType : ${heroType}"
+						  th:text="${oneType}"
+						  th:value="${oneType}"></option>
+		      </select>
+		    </div>
+		  </div>
+
+		  <div class="form-group form-group-lg col-sm-2 control-label white">
+		  	<button class="btn btn-default" type="submit" role="button">Create</button>
+		  </div>
+
+		  <div class="form-group form-group-lg col-sm-3 control-label white">
+		  	<a class="btn btn-default" href="/gameMenu" role="button">Back</a>
+		  </div>
+		  
+
+		  <script type="text/javascript">
+		    $(document).ready(function(){
+		      $('.combobox').combobox();
+		    });
+		  </script>
+
+		</form>
+	</body>
+</html>
